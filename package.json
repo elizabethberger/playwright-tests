@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:test1": "npx playwright test --grep \"@TEST1\"",
+    "test:test2": "npx playwright test --grep \"@TEST2\"",
+    "test:test3": "npx playwright test --grep \"@TEST3\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elizabethberger/playwright-tests.git"
@@ -15,6 +21,11 @@
     "url": "https://github.com/elizabethberger/playwright-tests/issues"
   },
   "homepage": "https://github.com/elizabethberger/playwright-tests#readme",
+  "_moduleAliases": {
+    "@pages": "./pages/*",
+    "@components": "./components/*",
+    "@root": "./*"
+  },
   "devDependencies": {
     "@playwright/test": "^1.53.1",
     "@types/node": "^24.0.4",
