@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/elizabethberger/playwright-tests#readme",
   "_moduleAliases": {
-    "@pages": "./pages/*",
-    "@components": "./components/*",
+    "@pages": "./pages",
+    "@components": "./components",
     "@root": "./*"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.1",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.0.7",
     "prettier": "3.6.2"
   }
 }
