@@ -7,8 +7,8 @@ import { contactData } from '../test-data/contact.data';
 test.describe('Tests for SAP Fioneer Contact page', () => {
   let contactPage: ContactPage;
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
     contactPage = new ContactPage(page);
+    await page.goto('/');
   });
 
   test(
@@ -25,7 +25,7 @@ test.describe('Tests for SAP Fioneer Contact page', () => {
       await expect(page).toHaveURL(/.*\/contact-sales/);
 
       await page.waitForLoadState('domcontentloaded');
-      await contactPage.firstNameField.waitFor({state: 'visible'});
+      await contactPage.firstNameField.waitFor({ state: 'visible' });
 
       await contactPage.firstNameField.fill(contactData.firstName);
       await contactPage.lastNameField.fill(contactData.lastName);

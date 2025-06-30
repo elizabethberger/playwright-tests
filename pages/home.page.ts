@@ -48,8 +48,8 @@ export class HomePage {
     this.financeLearnMoreLink = this.page
       .getByRole('link', { name: 'Learn more' })
       .nth(2);
-    this.getInTouchButton = this.page.locator(
-      "a[href*='/contact-sales/'] span",
-    ).nth(0);
+    this.getInTouchButton = this.page
+      .locator("a[href*='/contact-sales/'] span")
+      .nth(0);
   }
 }

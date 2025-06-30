@@ -5,8 +5,8 @@ import { MenuComponent } from '../components/menu.component';
 test.describe('Tests for SAP Fioneer home page', () => {
   let homePage: HomePage;
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
     homePage = new HomePage(page);
+    await page.goto('/');
   });
 
   test(

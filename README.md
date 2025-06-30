@@ -34,7 +34,7 @@ npx playwright test --grep "@TEST1"
 
 ## Reporting
 
-Once the tests are finished, you can view the report using the command: 
+Once the tests are finished, you can view the report using the command:
 
 ```shell
 npx playwright show-report
