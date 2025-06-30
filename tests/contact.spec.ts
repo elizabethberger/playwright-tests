@@ -4,7 +4,7 @@ import { HomePage } from '../pages/home.page';
 import { ContactPage } from '../pages/contact.page';
 import { contactData } from '../test-data/contact.data';
 
-test.describe('Tests for SAP Fioneer Contact page', () => {
+test.describe('Tests for SAP Fioneer contact page', () => {
   let contactPage: ContactPage;
   test.beforeEach(async ({ page }) => {
     contactPage = new ContactPage(page);
