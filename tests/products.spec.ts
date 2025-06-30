@@ -7,20 +7,22 @@ test.describe('Tests for SAP Fioneer Product page', () => {
     await page.goto('/');
   });
 
-  test('user should verify if user is redirected to ESG KPI engine page',
-    {tag: "@TEST2"},
+  test(
+    'user should verify if user is redirected to ESG KPI engine page',
+    { tag: '@TEST2' },
     async ({ page }) => {
-    const menu = new MenuComponent(page);
-    const productsMenu = new ProductsMenuComponent(page);
-  
-    await page.waitForLoadState('domcontentloaded');
-    await menu.verifyMenuElements();
+      const menu = new MenuComponent(page);
+      const productsMenu = new ProductsMenuComponent(page);
 
-    await menu.productMenuSection.click();
-    await productsMenu.financeAndEsgButton.waitFor({state: 'visible'});
-    await productsMenu.financeAndEsgButton.click();
-    await productsMenu.esgKpiEngineButton.click();
+      await page.waitForLoadState('domcontentloaded');
+      await menu.verifyMenuElements();
 
-    await expect(page).toHaveURL(/.*\/esg-kpi-engine/);
-  });
+      await menu.productMenuSection.click();
+      await productsMenu.financeAndEsgButton.waitFor({ state: 'visible' });
+      await productsMenu.financeAndEsgButton.click();
+      await productsMenu.esgKpiEngineButton.click();
+
+      await expect(page).toHaveURL(/.*\/esg-kpi-engine/);
+    },
+  );
 });

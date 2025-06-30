@@ -11,6 +11,7 @@ export class HomePage {
   financeAndESGSectionHeading: Locator;
   financeAndESGSectionDescription: Locator;
   financeLearnMoreLink: Locator;
+  getInTouchButton: Locator;
 
   constructor(private page: Page) {
     //Section header
@@ -47,9 +48,9 @@ export class HomePage {
     this.financeLearnMoreLink = this.page
       .getByRole('link', { name: 'Learn more' })
       .nth(2);
-  }
-
-  async loginAsUser() {
-    await this.financialServicesHeading;
+    this.getInTouchButton = this.page
+      .getByRole('article')
+      .filter({ hasText: 'Next generation core b|' })
+      .getByLabel('Get in touch');
   }
 }
