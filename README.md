@@ -40,6 +40,8 @@ Once the tests are finished, you can view the report using the command:
 npx playwright show-report
 ```
 
+The current report is also available for download in the Github Actions tab of the Artifacts section.
+
 Video and trace viewer is displayed after the test fails.
 
 ## Where are the tests?
