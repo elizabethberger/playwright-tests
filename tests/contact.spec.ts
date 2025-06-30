@@ -11,7 +11,7 @@ test.describe('Tests for SAP Fioneer Contact page', () => {
     contactPage = new ContactPage(page);
   });
 
-  test.only(
+  test(
     'user should verify valdiation when an incorrect email is filled',
     { tag: '@TEST3' },
     async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe('Tests for SAP Fioneer Contact page', () => {
       await expect(page).toHaveURL(/.*\/contact-sales/);
 
       await page.waitForLoadState('domcontentloaded');
-      await expect(contactPage.firstNameField).toBeVisible();
+      await contactPage.firstNameField.waitFor({state: 'visible'});
 
       await contactPage.firstNameField.fill(contactData.firstName);
       await contactPage.lastNameField.fill(contactData.lastName);
